@@ -22,44 +22,46 @@ body {
 
 .container {
   display: flex;
-  height: 80%;
+  height: 85%;
   min-width: 100%;
   justify-content: center;
 }
 
 .legend-container {
-  width: 30%;
+  width: 28%;
 }
   
 .fjord {
-  position: relative;
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  height: 85%;
+  width: 28%;
   
 }
 
 .odin-icon {
-  position: relative;
-  width: 150px;
-  left: 37%;
-  bottom: 75%;
+  position: fixed;
+  width: 10%;
+  left: 9%;
+  bottom: 40%;
   
 }
 
 .legend {
-  position: relative;
-  bottom: 75%;
-  left: 17%;
-  font-size: 66px;
+  position: fixed;
+  bottom: 27%;
+  left: 2.5%;
+  font-size: 4vw;
   font-family: "Norse Bold";
   color: #fff;
 }
 
 .legend-credit {
-  position: relative;
-  bottom: 45%;
-  left: 24%;
+  position: fixed;
+  bottom: 12%;
+  left: 5%;
   color: #fff;
+  font-size: clamp(12px, 1vw, 24px);
+  width: 22vw;
 }
 
 a {
@@ -72,8 +74,7 @@ a {
   align-items: flex-start;
   justify-content: space-evenly;
   background-color: #F7F5F2;
-  width: 40%;
-  
+  width: 44%;
 }
 
 .heading {
@@ -83,10 +84,9 @@ a {
 }
 
 .heading p {
-  width: 620px;
-  font-size: 22px;
+  width: 80%;
+  font-size: clamp(16px, 1.5vw, 24px);
   margin-left: 40px;
-  
 }
 
 .form-container {
@@ -101,7 +101,7 @@ a {
 
 .form-p {
   margin: 0 0 20px 10px;
-
+  font-size: clamp(18px, 1vw, 22px);
 }
 
 .name-container, 
@@ -121,14 +121,14 @@ a {
 .confirm-password {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
+  font-size: clamp(10px, 1vw, 14px);
   letter-spacing: 3px;
 }
 
 input {
   margin-top: 5px;
-  height: 25px;
-  width: 200px;
+  height: 3vh;
+  width: 80%
 }
 
 .validInput {
@@ -156,23 +156,31 @@ input[type="submit"] {
   color: red;
 }
 
-.password-span, .confirm-password {
-  display: flex;
-  width: 100%;
+.fname-span,
+.lname-span,
+.password-span,
+.confirm-password-span {
+  max-width: max(150px, 110px);
+  font-weight: bold;
 }
 
 .signup-container {
   margin-left: 40px;
 }
 
+.signup-container p {
+  font-size: clamp(14px, 1vw, 24px);
+}
+
 .image-container {
-  width: 30%;
+  width: 28%;
   height: 100%;
 }
 
 .tundra {
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  width: 28%;
+  height: 85%;
 }
 
 form {
@@ -180,8 +188,10 @@ form {
 }
 
 .image-credit {
-  position: relative;
-  left: 30%;
-  bottom: 5%;
+  position: fixed;
+  right: 0%;
+  bottom: 12%;
   color: #fff;
+  font-size: clamp(12px, 1vw, 24px);
+  width: 22vw;
 }

@@ -27,7 +27,7 @@ function validCredentials (element) {
   element.style.backgroundPosition = "right";
 }
 
-fName.addEventListener("input", () => {
+fName.addEventListener("focusout", () => {
   if (fName.value === "") {
     fNameSpan.innerText = "";
     fName.classList.remove("invalid-input");
@@ -46,7 +46,7 @@ fName.addEventListener("input", () => {
   }
 });
  
-lName.addEventListener("input", () => {
+lName.addEventListener("focusout", () => {
   if (lName.value === "") {
     lNameSpan.innerText = "";
     lName.classList.remove("invalid-input");
@@ -65,10 +65,11 @@ lName.addEventListener("input", () => {
   }
 });
 
-password.addEventListener("input", () => {
+password.addEventListener("focusout", () => {
   if (password.value === "") {
     passwordSpan.innerText = "";
     password.classList.remove("invalid-input");
+    password.style.background = "none";
   } else if (passwordRegex.test(password.value) === false) {
     passwordSpan.innerText = "Between 8 and 15 Characters Please";
     password.classList.add("invalid-input");
@@ -84,12 +85,13 @@ password.addEventListener("input", () => {
   }
 });
 
-confirmPassword.addEventListener("input", () => {
+confirmPassword.addEventListener("focusout", () => {
   if (confirmPassword.value === "") {
     confirmPasswordSpan.innerText = "";
     password.classList.remove("invalid-input");
+    confirmPassword.style.background = "none";
   } else if (confirmPassword.value !== password.value) {
-    confirmPasswordSpan.innerText = "Make sure your passwords match!";
+    confirmPasswordSpan.innerText = "No match!";
     confirmPassword.classList.add("invalid-input");
     confirmPasswordSpan.classList.add("invalid-span");
     submitButton.setAttribute("disabled", true);
