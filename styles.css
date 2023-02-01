@@ -24,7 +24,7 @@ body {
   display: flex;
   height: 80%;
   min-width: 100%;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .legend-container {
@@ -41,15 +41,14 @@ body {
 .odin-icon {
   position: relative;
   width: 150px;
-  left: 198%;
-  bottom: 62%;
-  color: #3C2A21 ;
-  background-color: #D5CEA3;
+  left: 37%;
+  bottom: 75%;
+  
 }
 
 .legend {
   position: relative;
-  bottom: 85%;
+  bottom: 75%;
   left: 17%;
   font-size: 66px;
   font-family: "Norse Bold";
@@ -132,31 +131,52 @@ input {
   width: 200px;
 }
 
-.signup-container {
-  margin-left: 40px;
+.validInput {
+  border: 1px solid green;
 }
 
-button {  
+.invalid-input {
+  border: 1px solid red;
+}
+
+input[type="submit"] {
   width: 150px;
   height: 40px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   font-size: 16px;
   border-radius: 8px;
   font-weight: bold;
   color: #fff;
-  background-color: #548CA8;  
+  background-color: #548CA8;
+  cursor: pointer;
+}
+
+.invalid-span {
+  margin-top: 10px;
+  color: red;
+}
+
+.password-span, .confirm-password {
+  display: flex;
+  width: 100%;
+}
+
+.signup-container {
+  margin-left: 40px;
 }
 
 .image-container {
   width: 30%;
   height: 100%;
-  
 }
 
 .tundra {
   width: 100%;
   height: 100%;
-  
+}
+
+form {
+  width: 100%;
 }
 
 .image-credit {
